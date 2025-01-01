@@ -85,3 +85,19 @@
     
 })(jQuery);
 
+
+
+
+// Pop-box Start
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.add('hide-popup');
+    setTimeout(() => popup.style.display = 'none', 500); // Delay to allow animation
+}
+
+// Show the popup when the page loads
+window.onload = function () {
+    const popup = document.getElementById('popup');
+    popup.classList.remove('hidden');
+    popup.classList.add('show');
+};
