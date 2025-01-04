@@ -101,3 +101,13 @@ window.onload = function () {
     popup.classList.remove('hidden');
     popup.classList.add('show');
 };
+
+// for Who We Are
+const textElement = document.getElementById("dynamic-text");
+const words = ["Who", "What"]; // Words to alternate between
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % words.length; // Cycle through the words
+  textElement.textContent = words[index];
+}, 2000); // Change every 2 seconds
